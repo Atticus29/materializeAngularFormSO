@@ -1,25 +1,34 @@
 <div class="container">
   <div class="row">
     <form class="col s12" materialize [formGroup]="testForm">
-      <div class="input-field col m4 s12">
-        <select formControlName="positiveControlBound" materialize="material_select" id="posCntrl">
+      <div class="input-field col m3 s12">
+        <select formControlName="positiveControl1Bound" materialize="material_select" id="posCntrl1">
+          <option disabled="true" selected>Choose from the options</option>
+          <option>this</option>
+          <option>should</option>
+          <option>work</option>
+        </select>
+        <label for="posCntrl1">This one works:</label>
+      </div>
+      <div class="input-field col m3 s12">
+        <select formControlName="positiveControl2Bound" materialize="material_select" id="posCntrl2">
           <option disabled="true" selected>Choose from the options</option>
           <option *ngFor="let opt of opts">{{opt}}</option>
         </select>
-        <label for="posCntrl">This one works:</label>
+        <label for="posCntrl2">This one works:</label>
       </div>
-      <div class="input-field col m4 s12">
-        <select formControlName="positiveControl2Bound" materialize="material_select" id="posCntrl2">
+      <div class="input-field col m3 s12">
+        <select formControlName="positiveControl3Bound" materialize="material_select" id="posCntrl3">
           <option *ngFor="let opt of retrievedDbOpts">{{opt.$value}}</option>
         </select>
-        <label for="posCntrl2">This one from firebase works:</label>
+        <label for="posCntrl3">This one from firebase works b/c there's no disabled selected option:</label>
       </div>
-      <div class="input-field col m4 s12">
-        <select formControlName="positiveControl2Bound" materialize="material_select" id="posCntrl2">
+      <div class="input-field col m3 s12">
+        <select formControlName="useCase" materialize="material_select" id="useCase">
           <option disabled selected>Choose from the options</option>
           <option *ngFor="let opt of retrievedDbOpts">{{opt.$value}}</option>
         </select>
-        <label for="posCntrl2">But this one from firebase doesn't work:</label>
+        <label for="useCase">But this one from firebase doesn't work:</label>
       </div>
     </form>
   </div>
