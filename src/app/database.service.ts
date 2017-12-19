@@ -19,4 +19,8 @@ export class DatabaseService {
     this.opts.push(opt);
   }
 
+  getOpts(){
+    return this.opts;
+  }
+
 }

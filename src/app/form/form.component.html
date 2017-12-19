@@ -2,12 +2,25 @@
   <div class="row">
     <form class="col s12" materialize [formGroup]="testForm">
       <div class="input-field col m4 s12">
-          <select formControlName="positiveControlBound" materialize="material_select" id="posCntrl">
-            <option value="" disabled selected>Choose from the options</option>
-            <option *ngFor="let opt of opts">{{opt}}</option>
-          </select>
-          <label for="posCntrl">This one works:</label>
-        </div>
+        <select formControlName="positiveControlBound" materialize="material_select" id="posCntrl">
+          <option disabled="true" selected>Choose from the options</option>
+          <option *ngFor="let opt of opts">{{opt}}</option>
+        </select>
+        <label for="posCntrl">This one works:</label>
+      </div>
+      <div class="input-field col m4 s12">
+        <select formControlName="positiveControl2Bound" materialize="material_select" id="posCntrl2">
+          <option *ngFor="let opt of retrievedDbOpts">{{opt.$value}}</option>
+        </select>
+        <label for="posCntrl2">This one from firebase works:</label>
+      </div>
+      <div class="input-field col m4 s12">
+        <select formControlName="positiveControl2Bound" materialize="material_select" id="posCntrl2">
+          <option disabled selected>Choose from the options</option>
+          <option *ngFor="let opt of retrievedDbOpts">{{opt.$value}}</option>
+        </select>
+        <label for="posCntrl2">But this one from firebase doesn't work:</label>
+      </div>
     </form>
   </div>
 </div>
