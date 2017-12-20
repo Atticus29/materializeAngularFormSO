@@ -1,3 +1,11 @@
+#Set up
+```
+git clone https://github.com/Atticus29/materializeAngularFormSO.git
+cd materializeAngularFormSO
+npm install
+ng serve
+```
+
 # MaterializeFormMCV
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
