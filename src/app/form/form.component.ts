@@ -29,7 +29,10 @@ export class FormComponent implements OnInit {
     // });
 
     this.testForm = this.fb.group({
-
+      positiveControl1Bound: '',        // Added this line
+      positiveControl2Bound: '',        // Added this line
+      positiveControl3Bound: '',        // Added this line
+      useCase: '', 
     });
 
     this.db.getOpts().subscribe(opts=>{
